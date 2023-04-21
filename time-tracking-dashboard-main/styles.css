@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+:root{
+    /* --- --- --- ---  PRIMARY --- --- --- --- */
+    --Blue: hsl(246, 80%, 60%);
+
+    --Light-orange: hsl(15, 100%, 70%); /*work*/
+    --Soft-blue: hsl(195, 74%, 62%); /*Play*/
+    --Light-red: hsl(348, 100%, 68%);/*study*/
+    --Lime-green: hsl(145, 58%, 55%);/*exercise*/
+    --Violet: hsl(264, 64%, 52%);    /*social*/
+    --Soft-orange: hsl(43, 84%, 65%);/*self care*/
+
+    /* --- --- --- ---  NEUTRAL --- --- --- --- */
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    Font-size: 18px; /*card titles e.g. Work, Play*/
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--Very-dark-blue);
+    
+}
+main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat( 4, 254px);
+    grid-template-rows: repeat(2, 244px);
+    gap: 30px;
+    place-content: center;
+}
+.colum1{
+    width: 254px;
+    height: 514px;
+   border-radius: 10px;
+   position: relative;
+   background-color: var(--Dark-blue);
+   grid-row: 1/3;
+}
+
+.photo{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 3px solid white;
+}
+.description{
+    height: 352px;
+    background-color: var(--Blue);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+.report{
+    margin-top: 25px;
+    color: var(--Pale-Blue);
+}
+.name{
+    font-size: 45px;
+    font-weight:100;
+    color: white;
+    width: 100px;
+    margin-top: 12px;
+}
+.timess{
+    height: 161px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: var(--Pale-Blue);
+    font-weight: 300;
+    cursor: pointer;
+    padding: 1.5rem;
+}
+
+.selection{
+    color: red;
+}
+ 
+
+
+/* --- --- --- Boxes --- --- --- */
+.box{
+    width: 254px;
+    height: 244px;
+    border-radius: 10px;
+    position: relative;
+}
+.box-img{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    right: 1rem;
+    z-index: 1;
+}
+.info{
+    background-color: var(--Dark-blue);
+    border-radius: 10px;
+    height: 198px;
+    position: relative;
+    top: 47px;
+    z-index: 2;
+    padding: 1.3rem;
+    
+}
+.info:hover{
+    background-color: var(--Desaturated-blue);
+}
+.area{
+    color: white;
+    font-weight: 500;
+    margin-bottom: 1.3rem;
+}
+.time{
+    font-size: 55px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: .6rem;
+}
+.last-week{
+    color: var(--Pale-Blue);
+    font-size: .9rem;
+}
+.points{
+    width: 20px;
+    height: 6px;
+    margin-left: 120px;
+    cursor: pointer;
+}
+
+
+/* --- --- --- singular --- --- --- */
+.work{
+    background-color: var(--Light-orange);
+}
+.play{
+    background-color: var(--Soft-blue);
+}
+.study{
+    background-color: var(--Light-red);
+}
+.exercise{
+    background-color: var(--Lime-green);
+}
+.exercise-point{
+    margin-left: 99px;
+}
+.social{
+    background-color: var(--Violet);
+}
+.SelfCare{
+    background-color: var(--Soft-orange);
+}
+.selfcare-point{
+    margin-left: 94px;
+}
+
+/* --- --- --- mediaquery --- -- --- */
+
+@media (max-width: 1100px) {
+    main{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 254px);
+    }
+    
+}
+@media (max-width: 375px) {
+
+    main{
+        margin: 450px 0;
+        display: grid;
+        grid-template-columns: 325px;
+        grid-template-rows: repeat(7, auto);
+        row-gap: 40px;
+    }
+    .colum1{
+        width: 100%;
+        height: 202px;
+        margin-top: 10px;
+    }
+    .description{
+        height: 132px;
+        padding: 28px;
+        display: flex;
+    }
+    .photo{
+        width: 70px;
+        height: 70px;
+
+    }
+    .report{
+        margin: 10px 17px;
+    }
+    .name{
+        font-size: 1.5rem;
+        position: absolute;
+        width: 200px;
+        top: 50px;
+        left: 120px;
+
+    }
+    .timess{
+        height: 69px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .box{
+    
+        width: 100%;
+        height: 160px;
+    }
+    .info{
+        height: 122px;
+        display: flex;
+        position: relative;
+        
+    }
+    .time{
+        font-size: 30px;
+        position: absolute;
+        bottom: 1rem;
+    }
+    .last-week{
+        position: absolute;
+        right: 1.3rem;
+        bottom:  30px;
+
+    }
+    .points{
+        position: absolute;
+        right: 20px;
+    }
+}
+
+
+
